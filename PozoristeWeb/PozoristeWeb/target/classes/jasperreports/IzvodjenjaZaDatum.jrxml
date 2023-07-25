@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IzvodjenjaZaDatum" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0d5f0314-5b54-41f5-80ff-eb7aa82fbb9f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="datum" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="predstava.naziv" class="java.lang.String"/>
+	<field name="predstava.trajanje" class="java.lang.Integer"/>
+	<field name="predstava.reziser.ime" class="java.lang.String"/>
+	<field name="predstava.reziser.prezime" class="java.lang.String"/>
+	<field name="scena.naziv" class="java.lang.String"/>
+	<variable name="ukupno" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{predstava.naziv}]]></variableExpression>
+	</variable>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{predstava.reziser.prezime}]]></groupExpression>
+		<groupHeader>
+			<band height="31">
+				<textField>
+					<reportElement x="52" y="0" width="100" height="30" uuid="f7640767-7b68-4774-afcc-6f969c1d8766"/>
+					<textFieldExpression><![CDATA[$F{predstava.reziser.ime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="152" y="0" width="100" height="30" uuid="981f7469-5508-48ca-a27b-89250dc4bb65"/>
+					<textFieldExpression><![CDATA[$F{predstava.reziser.prezime}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="52" height="30" uuid="ee4f1720-1bc9-45a8-8529-674de3c564d9"/>
+					<text><![CDATA[Reziser:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="371" height="34" uuid="789f1dbb-ab0e-4712-b599-be99f3089e4d"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Prikaz izvodjenja predstava za dan:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="0" width="174" height="34" uuid="14a3a251-968e-42f6-80dd-c26fc24c4f5a"/>
+				<textFieldExpression><![CDATA[$P{datum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="186" height="30" backcolor="#BD9044" uuid="7d4fd453-5d79-4de6-b913-0056957c4d2c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f9ca147-ca95-44c5-9332-87e25992cb83"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Naziv predstave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="186" y="0" width="117" height="30" backcolor="#BD9044" uuid="c30ef50c-7b44-433b-879d-008b5b996fbf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d94af304-7d79-4e7f-8cff-88bd8baf1f59"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Trajanje]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="303" y="0" width="250" height="30" backcolor="#BD9044" uuid="7040d987-b3f9-4999-bd63-aa8be71b7513">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="22bbc543-8835-4a3c-aff6-1e1aa1060de8"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Scena]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="186" height="30" uuid="f3df7c58-df72-47ae-a715-d2149006b7b4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f9ca147-ca95-44c5-9332-87e25992cb83"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{predstava.naziv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="0" width="117" height="30" uuid="63165b75-a41b-455e-8b90-fd3c989f7611">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d94af304-7d79-4e7f-8cff-88bd8baf1f59"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{predstava.trajanje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="250" height="30" uuid="31529211-4474-4c7b-b56b-815bff67fe99">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a4149161-1a64-4feb-85f9-6b2f80a91395"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{scena.naziv}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="256" y="0" width="42" height="30" uuid="90a627c0-9dc6-447a-9b62-5ad1bedb1035"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="30" uuid="306f8247-92dd-4ea9-94a3-2ffb92e99625"/>
+				<textFieldExpression><![CDATA[$V{ukupno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="fc33c52d-9cf7-4d7e-bfb4-23c9741d1ea6"/>
+				<text><![CDATA[Ukupno izvodjenja:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

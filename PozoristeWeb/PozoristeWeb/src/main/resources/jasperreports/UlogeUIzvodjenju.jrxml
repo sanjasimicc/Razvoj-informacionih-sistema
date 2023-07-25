@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UlogeUIzvodjenju" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b5322b1f-5b4c-4238-abab-9feffa53b484">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="naziv" class="java.lang.String"/>
+	<parameter name="trajanje" class="java.lang.String"/>
+	<parameter name="opis" class="java.lang.String"/>
+	<parameter name="reziser" class="java.lang.String"/>
+	<parameter name="zanrovi" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="glumi.uloga.naziv" class="java.lang.String"/>
+	<field name="glumi.glumac.ime" class="java.lang.String"/>
+	<field name="glumi.glumac.prezime" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="182" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="550" height="30" forecolor="#0F37A6" uuid="963391a8-7880-4b2f-81ee-6e51bab71d86"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Uloge za izvodjenja predstave]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="30" width="180" height="20" uuid="e05320a7-dbae-469f-b213-24a901a98e89"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{naziv}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="100" height="20" uuid="71498186-d870-43b7-aba9-6dbed70c02ee"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Naziv:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="adfb8aa5-a5b3-4037-90b0-0e78e5d4aa67"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Trajanje:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="60" width="180" height="20" uuid="256547fb-8b59-4b8f-b933-7d5d75590850"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{trajanje}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="90" width="100" height="20" uuid="ddb9c64a-5b50-448c-bcfa-0196daa08f65"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Opis:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="90" width="450" height="20" uuid="bdaec045-fda7-424f-848b-4d489c7b8504"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{opis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="120" width="100" height="20" uuid="e9d4adf3-482c-41c2-960b-617d7dd125d4"/>
+				<text><![CDATA[Reziser:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="120" width="180" height="20" uuid="b9c9523d-fd7f-49d1-bad9-eed1518d8075"/>
+				<textFieldExpression><![CDATA[$P{reziser}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="150" width="100" height="20" uuid="c62e5db3-0d4f-4503-ae53-e35cc4cb8f54"/>
+				<text><![CDATA[Zanrovi:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="150" width="450" height="20" uuid="4c799237-2075-4810-8c09-63f1e0c63b74"/>
+				<textFieldExpression><![CDATA[$P{zanrovi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="180" height="30" backcolor="#8DB4E3" uuid="19277611-9750-49c9-84e6-bcad63624cc2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c06eb206-d4dd-4688-9aeb-e2e8f3042c6e"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Uloga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="180" y="0" width="180" height="30" backcolor="#8DB4E3" uuid="1c2ff2ab-03b4-4696-87f9-e7dcf5f14215">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21507975-c13e-43ef-9fdc-6f78c0a6a14f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ime glumca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="0" width="190" height="30" backcolor="#8DB4E3" uuid="b1212961-1853-4528-8d0c-c82ebc9d0b2e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c9c21dae-03ab-452d-8217-15941859384d"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prezime glumca]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="180" height="30" uuid="4f7e678e-01c9-46fd-9529-7a768952fecb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c06eb206-d4dd-4688-9aeb-e2e8f3042c6e"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{glumi.uloga.naziv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="180" height="30" uuid="8b407b1d-2c68-45c7-b78c-4f6d308b2432">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="21507975-c13e-43ef-9fdc-6f78c0a6a14f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{glumi.glumac.ime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="190" height="30" uuid="b6509862-de03-4366-9ea6-2da236401f43">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c9c21dae-03ab-452d-8217-15941859384d"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{glumi.glumac.prezime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="266" y="0" width="29" height="30" uuid="937083a4-1c1f-42ab-8c5d-ad2571ee4f25"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
